@@ -1,1 +1,7 @@
-No restaurants yet
+<% if @restaurants.all.any? %>
+	<% @restaurants.all.each do |restaurant| %>
+		<%= restaurant.name %>
+	<% end %>
+<% else %>
+	No restaurants yet
+<% end %>
