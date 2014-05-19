@@ -37,3 +37,15 @@ describe 'editing a restaurant' do
 	end
 end
 
+describe 'deleting a restaurant' do
+	before { Restaurant.create(name: 'Franco Manca', address: 'Brixton Village')}
+
+	it 'removes the restaurant from the index' do
+		visit '/restaurants'
+		click_link 'Delete Franco Manca'
+
+		expect(page).not_to have_content 'Franco Manca'	
+		expect(page).to have_content 'Deleted successfully'
+
+	end
+end

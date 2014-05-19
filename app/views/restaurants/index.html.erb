@@ -3,8 +3,9 @@
 		<% @restaurants.all.each do |restaurant| %>
 			<li><%= restaurant.name %></li>
 			<%= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant) %>
+			<%= link_to "Delete #{restaurant.name}", restaurant_path(restaurant), method: :delete %>
 		<% end %>
 	</ul>
 <% else %>
 	No restaurants yet
-<% end %>
+<% end %>	
