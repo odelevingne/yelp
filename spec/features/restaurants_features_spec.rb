@@ -26,7 +26,7 @@ describe 'creating a restaurant' do
 		expect(page).to have_content 'McDonalds'
 	end
 
-	it 'raises and error if any of the fields are invalid' do
+	it 'raises an error if any of the fields are invalid' do
 		visit 'restaurants/new'
 
 		fill_in 'Name', with: nil
@@ -34,7 +34,7 @@ describe 'creating a restaurant' do
 		fill_in 'Cuisine', with: nil
 		click_button 'Create Restaurant'
 
-		expect(page).to have_button 'Create Restaurant'
+		expect(page).to have_content 'errors'
 	end
 end
 
