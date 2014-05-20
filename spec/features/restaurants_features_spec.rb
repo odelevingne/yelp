@@ -29,12 +29,12 @@ describe 'creating a restaurant' do
 	it 'raises and error if any of the fields are invalid' do
 		visit 'restaurants/new'
 
-		fill_in 'Name', with: ''
-		fill_in 'Address', with: ''
-		fill_in 'Cuisine', with: ''
+		fill_in 'Name', with: nil
+		fill_in 'Address', with: nil
+		fill_in 'Cuisine', with: nil
 		click_button 'Create Restaurant'
 
-		expect(current_path).to eq '/restaurants/new'
+		expect(page).to have_button 'Create Restaurant'
 	end
 end
 
