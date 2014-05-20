@@ -6,7 +6,12 @@ describe 'restaurant index page' do
 			visit '/restaurants'
 			expect(page).to have_content 'No restaurants yet'
 			end
+
+		it 'should have a link to add a new restaurant' do
+			visit '/restaurants'
+			expect(page).to have_link 'Add restaurant'
 		end
+	end
 end
 
 
