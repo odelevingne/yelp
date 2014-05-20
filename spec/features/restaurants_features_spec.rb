@@ -14,12 +14,12 @@ describe 'restaurant index page' do
 	end
 end
 
-
 describe 'creating a restaurant' do
 	it 'added it to the restaurants index' do
 		visit 'restaurants/new'
 		fill_in 'Name', with: 'McDonalds'
 		fill_in 'Address', with: '1 City Road, London'
+		fill_in 'Cuisine', with: 'Burgers'
 		click_button 'Create Restaurant'
 
 		expect(current_path).to eq '/restaurants'
@@ -28,7 +28,7 @@ describe 'creating a restaurant' do
 end
 
 describe 'editing a restaurant' do
-	before { Restaurant.create(name: 'Franco Manca', address: 'Brixton Village')}
+	before { Restaurant.create(name: 'Franco Manca', address: 'Brixton Village', cuisine: 'Pizza')}
 
 	it 'saves the changes to the restaurant' do
 		visit '/restaurants'
