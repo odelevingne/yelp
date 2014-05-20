@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Restaurant do
 	it 'must have a name' do
-		expect(Restaurant.new(name: nil)).to have(1).errors_on(:name)
+		expect(Restaurant.new(name: nil)).to have(2).errors_on(:name)
 	end
 
 	it 'must have a name' do
@@ -23,5 +23,9 @@ describe Restaurant do
 
 	it 'must have an address' do
 		expect(Restaurant.new(address: 'London')).to have(0).errors_on(:address)
+	end
+
+	it 'is not valid unless the name starts with an uppercase letter' do
+		expect(Restaurant.new(name: 'mcdonalds')).to have(1).errors_on(:name)
 	end
 end
