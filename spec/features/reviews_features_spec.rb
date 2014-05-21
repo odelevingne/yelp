@@ -5,7 +5,7 @@ describe 'writing a new review' do
 
 	specify 'restaurants have no reviews when created' do
 		visit '/restaurants'
-		expect(page).to have_content '0 reviews'
+		expect(page).to have_content '0 Reviews'
 	end
 
 	it 'adds a review to the restaurant' do
@@ -15,7 +15,7 @@ describe 'writing a new review' do
 		fill_in 'Thoughts', with: 'This pizza wallows in mediocrity'
 		select '2', from: 'Rating'
 		click_button 'Leave Review'
-		
+
 		expect(current_path).to eq '/restaurants'
 		expect(page).to have_content 'This pizza wallows in mediocrity'
 		expect(page).to have_content '1 Review'
