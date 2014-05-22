@@ -46,12 +46,12 @@ describe '#average_rating' do
 		end
 	end
 
-	context '2 reviews' do
+	context 'more than 1 review' do
 		before do
 		  restaurant.reviews.create(rating:3)
 			restaurant.reviews.create(rating:1)
 		end
-		 
+
 		it 'returns an average of the two ratings' do
 			expect(restaurant.average_rating).to eq 2
 		end
