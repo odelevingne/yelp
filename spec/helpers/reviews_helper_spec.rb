@@ -11,13 +11,12 @@ describe ReviewsHelper do
 		end
 
 		specify 'if value is not a number, return it unchanged' do
+			expect(star_rating('N/A')).to eq 'N/A'
 		end
 
 		it 'rounds to the nearest whole star' do
+			expect(star_rating(2.8)).to eq '★★★☆☆'
 		end
 	end
 end
 
-
-
-# ★★★☆☆
