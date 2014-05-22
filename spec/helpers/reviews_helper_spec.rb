@@ -7,6 +7,7 @@ describe ReviewsHelper do
 		end
 
 		it 'returns x filled stars, with the remainder white stars, if x < 5' do
+			expect(star_rating(3)).to eq '★★★☆☆'
 		end
 
 		specify 'if value is not a number, return it unchanged' do
