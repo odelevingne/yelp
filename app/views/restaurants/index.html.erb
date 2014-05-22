@@ -8,6 +8,8 @@
 
 
 		<h4><%= pluralize restaurant.reviews.count, 'Review' %></h4>
+		<h5>Average rating: <%= restaurant.average_rating %></h5>
+
 		<ul>
 			<% restaurant.reviews.each do |review| %>
 				<li><%= review.rating %> - <%= review.thoughts%></li>
