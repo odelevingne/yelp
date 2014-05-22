@@ -1,5 +1,14 @@
 require 'spec_helper'
 
 describe Review do
-  pending "add some examples to (or delete) #{__FILE__}"
+	it 'is invalid if the rating is > 5' do
+		review = Review.new(rating: 10)
+		expect(review).to have(1).error_on(:rating)
+	end
+
+	it 'is invalid if the rating is < 1' do
+		review = Review.new(rating: 0)
+		expect(review).to have(1).error_on(:rating)
+	end
 end
+
