@@ -56,5 +56,16 @@ describe '#average_rating' do
 			expect(restaurant.average_rating).to eq 2
 		end
 	end
+
+	context 'a non-integer average' do
+		before do
+		  restaurant.reviews.create(rating:4)
+			restaurant.reviews.create(rating:1)
+		end
+
+		it 'returns the average of the two ratings' do
+			expect(restaurant.average_rating).to eq 2.5
+		end
+	end
 end
 
