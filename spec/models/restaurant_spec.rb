@@ -63,7 +63,7 @@ describe '#average_rating' do
 			restaurant.reviews.create(rating:1)
 		end
 
-		it 'returns the average of the two ratings' do
+		it 'does not round up or down' do
 			expect(restaurant.average_rating).to eq 2.5
 		end
 	end

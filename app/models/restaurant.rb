@@ -7,7 +7,7 @@ class Restaurant < ActiveRecord::Base
 		if reviews.any?
 			reviews.inject(0) {|total, review|
 				total + review.rating
-				} / reviews.count
+				} / reviews.count.to_f
 		else
 			'N/A'
 		end
