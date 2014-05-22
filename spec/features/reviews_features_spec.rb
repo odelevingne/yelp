@@ -16,10 +16,12 @@ describe 'writing a new review' do
 		expect(page).to have_content '1 Review'
 	end
 
-	xit 'calculates the average of reviews' do
+	it 'calculates the average of reviews' do
+		leave_review(3, 'not bad')
+		leave_review(1, 'terrible')
 
 		expect(current_path).to eq '/restaurants'
-		expect(page).to have_content ''
+		expect(page).to have_content 'Average rating: 2'
 	end
 
 
