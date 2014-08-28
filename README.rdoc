@@ -20,7 +20,7 @@ Technologies used
 - Postgresql
 - Mustache.js
 - Phantom.js
-- [Poltergeist]
+- Poltergeist
 
 How to run it
 ----
