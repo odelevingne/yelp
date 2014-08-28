@@ -1,15 +1,14 @@
 Yelp
 ===
-Week 8 task at Makers Academy - create a clone of popular review website, Yelp, as an introduction to Ruby on Rails
+We´re creating a YELP clone to get a basic introduction to Rails.
 
 Objectives of exercise
 ----
 Object orientation, folder structure, migrating the Databases correctly, test-driving everything.
 
-Still to do
+What could be added
 ----
-
-Front end design
+Diverse validations as well as more frontend design
 
 Technologies used
 ----
@@ -21,7 +20,7 @@ Technologies used
 - Postgresql
 - Mustache.js
 - Phantom.js
-- Poltergeist
+- [Poltergeist]
 
 How to run it
 ----
