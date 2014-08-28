@@ -1,14 +1,14 @@
 Yelp
 ----
-We´re creating a YELP clone to get a basic introduction to Rails.
+For our week 8 challenge at Makers Academy, we were set the task to create a clone of Yelp as an introduction to Ruby on Rails
 
 Objectives of exercise
 ----
 Object orientation, folder structure, migrating the Databases correctly, test-driving everything.
 
-To do:
+What still needs to be done
 ----
-Front-end design
+- Frontend work
 
 Technologies used
 ----
@@ -27,9 +27,9 @@ How to run it
 ```sh
 git clone git@github.com:odelevingne/yelp.git
 cd yelp
-bin/rails server
+bin/rails s
 ```
-go to localhost:3000/restaurants
+open your browser and go to localhost:3000/restaurants
 
 How to test it
 ----
@@ -37,4 +37,3 @@ How to test it
 cd yelp
 rspec
 ```
-
